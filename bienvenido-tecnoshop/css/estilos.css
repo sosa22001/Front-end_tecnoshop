@@ -1,0 +1,176 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+#cont-texto-principal {
+    display: flex;
+    flex-direction: column;
+}
+h2 {
+    font-family: 'Bebas Neue', cursive;
+}
+.navbar {
+    height: 70px;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 2rem;
+    outline: 5px solid rgba(0, 0, 0, 0.163);
+}
+.container-fluid{
+    flex-wrap: nowrap;
+    height: 50px;
+}
+.text-tecnoshop {
+    display: flex;
+}
+#logo-empresa{
+    width: 100px;
+}
+#btn-hamburger{
+    background-color: rgb(0, 0, 0);
+}
+#cont-texto-principal {
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 2.5rem;
+        flex-direction: row;
+        height: 500px;
+        overflow: hidden;
+        gap: 2rem;
+        align-items: center;
+    
+}
+.img-principal >img {
+    width: 100%;
+    border-radius: 15px;
+}
+.tecnoshop {
+    margin-left: 8px;
+    color:rgb(0, 98, 255)
+}
+#inicio-sesion {
+    width: 200px;
+    font-size: 1.2rem;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    background-color: black;
+    color: white;
+    margin-top: 30px;
+    font-weight: 600;
+}
+#logos-empresas {
+    margin-top: 100px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.loguito-empresas {
+    width: 50px;
+}
+.huawei {
+    width: 80px;
+}
+.apple {
+    width: 45px;
+}
+.samsung {
+    width: 72px;
+}
+.playStation {
+    width: 60px;
+}
+hr{
+    border: 1px solid black;
+    margin-bottom: 2rem;
+}
+#cualidades {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+}
+.nos-define {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+    width: 30%;
+    border-radius: 10px;
+    box-shadow: 2px 4px 1px 0px rgba(0, 0, 0, 0.346);
+    -webkit-box-shadow: 4px 4px 17px 0px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 4px 4px 17px 0px rgba(0, 0, 0, 0.435);
+}
+.text-cualidad {
+    width: 100px;
+    text-align: center;
+}
+.icono-cualidad {
+    font-size: 1.5rem;
+}
+.tiempo {
+    font-size: 16px;
+}
+.btn-otro {
+    background-color: rgb(255, 0, 149);
+    color: white;
+    border-radius: 5px;
+    border: none;
+    margin-top: 10px;
+    padding: 5px;
+}
+footer {
+    display: grid;
+    place-items: center;
+    height: 10vh;
+    background-color: black;
+    color: white;
+    width: 100%;
+    text-align: center;
+    margin-top: 5rem;
+}
+@media (max-width: 1400px) and (min-width: 630px){
+    #cont-texto-principal {
+        display: flex;
+        align-items: center;
+    }
+    .nos-define {
+        width: 200px;
+    }
+}
+@media (max-width: 630px) and (min-width: 400px){
+    #cont-texto-principal {
+        display: flex;
+        align-items: center;
+    }
+    #cualidades {
+        flex-direction: column;
+        align-items: center;
+    }
+    .nos-define {
+        width: 200px;
+        margin-bottom: 15px;
+    }
+
+    .img-principal >img {
+        display: none;
+    }
+
+    .contenedor-principal {
+        padding: 0 0.5rem;
+    }
+}
+
+.contenedor-principal {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+

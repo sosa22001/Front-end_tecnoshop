@@ -1,0 +1,83 @@
+.logo {
+    width: 80px;
+}
+.container {
+    display: flex;
+}
+#header-moto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+    height: 80px;
+    outline: 5px solid rgba(0, 0, 0, 0.466);
+    box-shadow: 1px 1px 1px black;
+}
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.text-navbar {
+    margin-top: 20px;
+}
+.navbar-brand {
+    padding: 0;
+    margin: 0;
+}
+#div-btn {
+    margin-top: 40px;
+}
+
+.card {
+    margin-top: 20px;
+    margin-right: 20px;
+}
+.estado-actual {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+.orden {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
+    margin-bottom: 0.5rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+        rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    border: 1px solid rgba(0, 0, 0, 0.119);
+}
+.detalle {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.enunciado {
+    font-weight: bold;
+}
+#seccion-cambiar-estado {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.botones {
+    display: flex;
+}
+.btn-estado {
+    width: 120px;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: crimson;
+    color: white;
+    height: 40px;
+}
+.btn-estado:hover {
+    background-color: green;
+}

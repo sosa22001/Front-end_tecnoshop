@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat&display=swap" rel="stylesheet">
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <title>Motorista</title>
+</head>
+
+<body>
+    <!-- CONTENIDO LOGIN -->
+    <div id="login-motorista-container" class="main-container">
+        <div id="login-motorista-content" class="content">
+            <header class="container-logo">
+                <img src="assets/img/logo-blanco.png" alt="logo">
+            </header>
+
+            <div class="container-imagen">
+                <img src="assets/img/motorista.png" alt="motociclista">
+                <h1>MOTORISTA</h1>
+            </div>
+
+            <main class="container-formulario">
+                <form action="" id="form-login">
+                    <section>
+                        <i class="fa-solid fa-user"></i>
+                        <input id="user" required type="text" placeholder="email">
+                    </section>
+                    <section>
+                        <i class="fa-solid fa-lock"></i>
+                        <input id="contra" required type="password" placeholder="contraseña">
+                    </section>
+                    <span id="login-error" class="msg-error"></span>
+                </form>
+            </main>
+
+            <footer class="container-boton">
+                <button type="button"><a id="iniciar-motorista" onclick="obtenerMotorista()">INICIAR SESION</a></button>
+                <p>No tengo cuenta, <a href="#" onclick="ocultarLogin()">registrarme</a></p>
+            </footer>
+        </div>
+    </div>
+
+    <!-- CONTENIDO REGISTRO -->
+    <div id="registro-motorista-container" class="main-container">
+        <div id="registro-motorista-content" class="content">
+            <!-- <nav>
+                <div class="logo-nav">
+                    <img id="logo-tecno-shop" src="assets/img/logo-negativo.png" alt="logo-empresa">
+                </div>
+                <img src="assets/img/motorista.png" alt="">
+            </nav> -->
+            <section class="titulo">
+                <div>Registrate</div>
+                Ingresa tus datos
+            </section>
+            <main>
+                <form action="" id="form-registro">
+                    <div class="contenedor-input">
+                        <p>Primer Nombre</p>
+                        <input id="inp-nombre" required class="input-bonito" type="text" placeholder="Kenneth">
+                    </div>
+                    <div class="contenedor-input">
+                        <p>Primer Apellido</p>
+                        <input id="inp-apellido" required class="input-bonito" type="text" placeholder="Contreras">
+                    </div>
+                    <div class="contenedor-input">
+                        <p>Email</p>
+                        <input id="inp-email" required class="input-bonito" type="email" placeholder="keneth00@gmail.com">
+                    </div>
+                    <div class="contenedor-input">
+                        <p>Teléfono</p>
+                        <input id="inp-telefono" required class="input-bonito" type="text" placeholder="0000-0000">
+                    </div>
+                    <div class="contenedor-input">
+                        <p>Años de Conducir</p>
+                        <input id="inp-años" required class="input-bonito" type="number">
+                    </div>
+                    <div class="contenedor-input">
+                        <p>¿Posee carro?</p>
+                        <div id="pregunta">
+                            <div>
+                                <input class="radio" type="radio" id="carro-si" name="carro" value="true">
+                            <label for="si">Sí</label>
+                            </div>
+                            <div>
+                                <input class="radio" type="radio" id="carro-no" name="carro" value="false">
+                            <label for="no">No</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contenedor-input">
+                        <p>¿Posee motocicleta?</p>
+                        <div id="pregunta">
+                            <div>
+                                <input class="radio" type="radio" id="moto-si" name="moto" value="true">
+                            <label for="si">Sí</label>
+                            </div>
+                            <div>
+                                <input class="radio" type="radio" id="moto-no" name="moto" value="false">
+                            <label for="no">No</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contenedor-input">
+                        <p>Contraseña</p>
+                        <input id="inp-contraseña" required class="input-bonito" type="password">
+                    </div>
+                    <span id="registro-error" class="msg-error"></span>
+                    <footer>
+                        <button id="btn-listo" onclick="validacionInputs()">LISTO</button>
+                        <p>Ya tengo cuenta, <a href="#" onclick="ocultarRegistro()">iniciar sesion</a></p>
+                    </footer>        
+                </form>
+            </main>
+        </div>
+    </div>
+
+
+    <script src="js/index.js"></script>
+    <script src="https://kit.fontawesome.com/8b44041adf.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

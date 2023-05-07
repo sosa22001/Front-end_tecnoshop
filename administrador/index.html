@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Administrador</title>
+</head>
+
+<body>
+
+    <header id="admin-header">
+        <i class="fa-solid fa-user-gear"></i>
+        <h1>MODO ADMINISTRADOR</h1>
+    </header>
+
+    <!-- Cartas de opciones -->
+    <div id="contenido-principal">
+        <div id="opt">
+            <h2>Toca para desplegar opciones</h2>
+            <section class="row" id="cartas-container">
+                <div class="col-xl-3 col-md-6  carta" onclick="irAdminEmpresas()">
+                    <h3>ADMINISTRAR EMPRESAS</h3>
+                    <img src="assets/img/admin-empresas1.svg" alt="ilust">
+                </div>
+                <div class="col-xl-3 col-md-6 carta" onclick="irAdminProductos()">
+                    <h3>ADMINISTRAR PRODUCTOS</h3>
+                    <img src="assets/img/admin-productos.svg" alt="ilust">
+                </div>
+                <div class="col-xl-3 col-md-6 carta" data-bs-toggle="modal" data-bs-target="#modal-admin-motoristas" onclick="renderizarVisualizarMotoristas()">
+                    <h3>VISUALIZAR MOTORISTAS</h3>
+                    <img src="assets/img/admin-motoristas.svg" alt="ilust">
+                </div>
+                <div class="col-xl-3 col-md-6 carta" onclick="irOrdenes()">
+                    <h3>VISUALIZAR ORDENES</h3>
+                    <img src="assets/img/admin-ordenes1.svg" alt="ilust">
+                </div>
+            </section>
+        </div>
+
+    </div>
+
+    <!-- Modal Administrar Productos  -->
+<!--     <div class="modal fade" onclick="irAdminProductos()" id="modal-admin-productos">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content" id="modal-productos">
+                
+            </div>
+        </div>
+    </div> -->
+
+    <!-- Modal Visualizar motoristas  -->
+    <div class="modal fade" id="modal-admin-motoristas" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content" >
+                <div class="modal-header">
+                    <h2 id="staticBackdropLabel">Verificar Motoristas</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="ordenes-container" id="modal-vis-moto">
+                        
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    
+   
+
+    <script src="js/index.js"></script>
+    <!-- FOTNT AWESOME -->
+    <script src="https://kit.fontawesome.com/8b44041adf.js" crossorigin="anonymous"></script>
+    <!-- BOOTSTRAP -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.min.js"
+        integrity="sha384-heAjqF+bCxXpCWLa6Zhcp4fu20XoNIA98ecBC1YkdXhszjoejr5y9Q77hIrv8R9i" crossorigin="anonymous">
+        </script>
+</body>
+
+</html>

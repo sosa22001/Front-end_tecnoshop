@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/pag-moto.css">
+</head>
+<body>
+    <header id="header-moto">
+        <h1>Hola de nuevo USER</h1>
+    </header>
+
+    <div id="contenido-principal">
+        <div id="opt">
+            <h2>Toca para desplegar opciones</h2>
+            <section class="row" id="cartas-container">
+                <div class="col-xl-4 col-md-6  carta" onclick="irOrdenesDisponibles()">
+                    <h3>Ordenes disponibles</h3>
+                    <img src="assets/img/orden-disponible.svg" alt="ilust">
+                </div>
+                <div class="col-xl-4 col-md-6 carta" onclick="irOrdenesProceso()">
+                    <h3>Ordenes en proceso</h3>
+                    <img src="assets/img/en-proceso.svg" alt="ilust">
+                </div>
+                <div class="col-xl-4 col-md-6 carta" data-bs-toggle="modal" data-bs-target="#modal-admin-ordenes" onclick="irOrdenesEntregadas()"">
+                    <h3>Ordenes entregadas</h3>
+                    <img src="assets/img/entregada.svg" alt="ilust">
+                </div>
+            </section>
+        </div>
+
+    </div>
+
+<!--     <div class="container cont-cartas">
+        <section class="col-3 carta" onclick="irOrdenesDisponibles()">
+            <h3>Ordenes disponibles</h3>
+            <img id="img-pre-orden" src="assets/img/motorista.png" alt="ilust">
+        </section>
+        <section class="col-3 carta" onclick="irOrdenesProceso()" >
+            <h3>Ordenes en proceso</h3>
+            <img id="img-pre-orden" src="assets/img/motorista.png" alt="ilust">
+        </section>
+        <section class="col-3 carta" onclick="irOrdenesEntregadas()" >
+            <h3>Ordenes entregadas</h3>
+            <img id="img-pre-orden" 
+            src="assets/img/motorista.png" alt="ilust">
+        </section>
+    </div> -->
+
+    <!--MODALES-->
+    <!-- Modal pedidos disponibles-->
+    <div class="modal fade" id="ordenesDisponibles" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+           </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+            </div>
+        </div>
+    <div>
+
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="../motorista/js/controlador-pag-motorista.js"></script>
+</body>
+</html>

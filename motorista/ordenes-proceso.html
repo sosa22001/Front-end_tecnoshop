@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/ord-dispo.css">
+</head>
+<body>
+  <header id="header-moto">
+    <img class="logo" src="./assets/img/logo-blanco.png" alt="" >
+    ORDENES EN PROCESO DEL MOTORISTA
+  </header>
+    
+    <div id="div-btn" class="container">
+        <button type="button" class="btn btn-primary" onclick="regresarMenu()">Regresar</button>
+    </div>
+    <div class="hola">
+        <div class="card" style="width: 18rem;">
+            <img src="./assets/img/aceptada.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Orden tomada</h5>
+              <div class="estado-actual">
+                <div>Estado actual</div>
+                <div> TOMADA</div>
+              </div>
+              <button  type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Cambiar estado</button>
+            </div>
+        </div>
+
+        <div class="card" style="width: 18rem;">
+            <img src="./assets/img/en camino.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Orden tomada</h5>
+              <div class="estado-actual">
+                <div>Estado actual</div>
+                <div>EN CAMINO</div>
+              </div>
+              <button  type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Cambiar estado</button>
+            </div>
+        </div>
+
+        <div class="card" style="width: 18rem;">
+            <img src="./assets/img/origen.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Orden tomada</h5>
+              <div class="estado-actual">
+                <div>Estado actual</div>
+                <div>EN EL ORIGEN</div>
+              </div>
+              <button  type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Cambiar estado</button>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img src="./assets/img/destino.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Orden tomada</h5>
+              <div class="estado-actual">
+                <div>Estado actual</div>
+                <div>EN EL DESTINO</div>
+              </div>
+              <button  type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Cambiar estado</button>
+            </div>
+        </div>
+    </div>
+
+    <!--Modal para hacer cambios en los paquetes-->
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Estado de los pedidos</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body" id="seccion-cambiar-estado">
+            <div class="card" style="width: 20rem;">
+                <img src="./assets/img/cambio.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <div class="botones">
+                    <div>
+                        <button class="btn-estado">TOMADA</button>
+                        <button class="btn-estado">EN CAMINO</button>
+                    </div>
+                    <div>
+                        <button class="btn-estado">EN EL ORIGEN</button>
+                        <button class="btn-estado">EN EL DESINO</button>
+                    </div>
+                  </div>
+                  
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <script src="./js/ordenes-disponibles.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

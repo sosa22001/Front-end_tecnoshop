@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/ord-dispo.css">
+</head>
+<body>
+    
+  <header id="header-moto">
+    <img class="logo" src="./assets/img/logo-blanco.png" alt="" >
+    ORDENES DISPONIBLES
+  </header>
+    <div id="div-btn" class="container">
+        <button type="button" class="btn btn-primary" onclick="regresarMenu()">Regresar</button>
+    </div>
+
+    <div class="hola">
+      <div class="row">
+        <div class="card" style="width: 18rem;">
+            <img src="./assets/img/esperando.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Esperando...</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!--Modal para ver detalles de la orden-->
+  
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Orden</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            
+            <div class="orden">
+                <div class="detalle">
+                    <p class="enunciado">Cliente:</p>
+                    <p class="descrp" id="nombre"></p>
+                </div>
+                <div class="detalle">
+                    <p class="enunciado">Direccion de Entrega:</p>
+                    <p class="descrp" id="direccion"></p>
+                </div>
+                <div class="detalle">
+                    <p class="enunciado">Telefono:</p>
+                    <p class="descrp" id="telefono"></p>
+                </div>
+                <div class="detalle">
+                    <p class="enunciado">Total:</p>
+                    <p class="descrp" id="total"></p>
+                </div>
+                <div class="detalle">
+                    <p class="enunciado">Producto:</p>
+                    <p class="descrp" id="producto"></p>
+                </div>
+                <div class="detalle">
+                  <p class="enunciado">Cantidad:</p>
+                  <p class="descrp" id="cantidad"></p>
+              </div>
+                <div class="btn-motoristas">
+                    <button class="btn btn-primary btn-ordenes" >Tomar orden</button>
+                </div>
+            </div>
+
+          </div>
+          <div class="modal-footer">
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    <script src="./js/ordenes-disponibles.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

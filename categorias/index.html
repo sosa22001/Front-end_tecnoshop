@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categorias</title>
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/f7e765b5ee.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/estilos-categorias.css">
+</head>
+
+<body>
+    <nav>
+        <div class="nav-izq">
+            <a href="index.html"><img src="assets/img/logo-blanco.png" alt=""></a>
+        </div>
+        <div class="nav-der">
+            <div class="lista click" data-bs-target="#mi-lista" aria-controls="offcanvasRight"
+                data-bs-toggle="offcanvas" onclick="renderizarListaDeseos()">
+                <i class="fa-solid fa-heart"></i>
+                <p>Mi lista</p>
+            </div>
+            <div class="lista click" onclick="obtenerOrdenesDeUsuario()" data-bs-target="#mi-carrito"
+                aria-controls="offcanvasRight" data-bs-toggle="offcanvas">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <p>Carrito</p>
+            </div>
+            <div class="lista click dropdown">
+                <div class="dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img id="img-perfil" src="assets/img/profile-generic.webp" alt="">
+                    <p id="nombre-usuario"></p>
+                </div>
+
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="../bienvenido-tecnoshop/index.html"><i
+                                class="fa-solid fa-right-from-bracket"></i> Salir</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="contenedor-principal">
+        <main id="contenido-1" class="container">
+            <div class="header">
+                Categorias
+                <div class="contenedor-buscador">
+                    <img id="icono-buscar" src="assets/img/buscar.png" alt="">
+                    <input id="buscador" type="search">
+                </div>
+            </div>
+            <div class="categorias ">
+            </div>
+        </main>
+        <div id="contenedor-categoria-selecionada">
+            <div id="ejemplo" class="container">
+                Página de ejemplo para las categorias
+                <button id="regresar" onclick="regresarCategorias()">REGRESAR</button>
+            </div>
+            <section id="productos" class="container">
+                <div id="filtro-pago">
+                    <div id="filtros">
+                        <div id="filtro-arriba">
+                            <i class="fa-solid fa-filter"></i>
+                            <h3>FILTROS</h3>
+                        </div>
+                        <div id="filtro-abajo">
+                            <div>Marcas</div>
+                        </div>
+                    </div>
+                    <div id="medida-pago">
+                        <div>
+                            Medidas de pago
+                        </div>
+                        <hr>
+                        <div>
+                            Click para saber más sobre el pago con tarjeta
+                        </div>
+                    </div>
+                </div>
+                <div id="articulos">
+                    <div id="banner-nombre-empresa" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Productos
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <section id="modal-info-empresa">
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Información de la empresa</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        Aquí irá una descripción detallada de cada empresa que se encuentra trabajando con nosotros.
+
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, sed?
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Ok</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MODAL INFO PRODUCTO -->
+    <div class="modal fade" style="font-family: 'Montserrat', sans-serif;" id="comprarProducto" tabindex="-1"
+        aria-labelledby="info-producto-modal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div id="title-producto-modal" class="modal-header">
+                    <h5 class="modal-title" id="info-producto-modal">DETALLE</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="card mb-3">
+                        <h5 class="card-title bold" id="detalle-nombre"></h5>
+                        <h6>L. <span id="detalle-precio"></span></h6>
+                        <img id="img-producto-modal" id="detalle-imagen"
+                            src="assets/img/imagenes-categorias/ordenador-portatil.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text" id="detalle-descripcion"></p>
+                            <p class="card-text">
+                                <hr>
+                            <div class="detalles-entrega">
+                                <p class="bold">MARCA </p>
+                                <p id="detalle-empresa" id="pertenece"></p>
+                            </div>
+                            <div id="carrito-fav">
+                            </div>
+                            <hr>
+                            <div class="detalles-entrega">
+                                <div class="bold">OPCIONES DE ENTREGA</div>
+                                <div id="iconos-retirar">
+                                    <div class="nose">
+                                        <i class="fa-solid fa-shop"></i>
+                                        <p>Retiralo en tienda</p>
+                                    </div>
+                                    <div class="nose">
+                                        <i class="fa-solid fa-truck"></i>
+                                        <p>Recibelo en casa</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div id="logos-pago" class="detalles-entrega">
+                                <p class="bold">OPCIONES DE PAGO</p>
+                                <img src="assets/img/logo-empresas/logo-solvenza-credito.webp" alt="">
+                                <img src="assets/img/logo-empresas/logo-bac-cuotas.webp" alt="">
+                            </div>
+                            <hr>
+                            <div id="hastags" class="detalles-entrega">
+                                <p class="bold">SUBCATEGORIA</p>
+                                <P Id="detalle-sub-categoria">Hogar</p>
+                            </div>
+                            <hr>
+
+                            <form action="" id="form-unidades">
+                                <label for="" class="bold">UNIDADES</label>
+                                <input type="number" class="form-control" id="inp-unidades" required>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button id="comprar" class="comprar btn-nuevo hover" onclick="">Agregar a carrito</button>
+                    <button id="btn-favoritos" class="hover btn-nuevo" data-bs-dismiss="modal" aria-label="Close" onclick="">Agregar a favoritos</button>
+     </div>
+            </div>
+        </div>
+    </div>
+
+    <!--MODAL CARRITO-->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="mi-carrito" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasRightLabel">MI CARRITO</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body" id="listaCarrito">
+        </div>
+        <p class="card-text" id="total"></p>
+
+    </div>
+
+    <!-- MODAL LISTA DESEOS -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="mi-lista" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasRightLabel">LISTA DE DESEOS</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body" id="listaDeseos">
+        </div>
+    </div>
+
+    <!-- MODAL DE PEDIDO -->
+    <div class="modal fade" id="modalPedido" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2><i class="fa-solid fa-circle-check" style="color: #13be13;"></i> Su pedido ha sido procesado
+                        exitosamente!</h2>
+                </div>
+                <div class="modal-body" styles="" id="body-pedido">
+                    <h2 class="modal-title fs-5" id="exampleModalLabel">Resumen de Transaccion</h2>
+
+                    <div class="grid">
+                        <p>Total a pagar:</p>
+                        <p id="pedido-total"></p>
+                    </div>
+                    <div class="grid">
+                        <p>Se aplicó el cobro al No. tarjeta:</p>
+                        <p id="pedido-tarjeta-credito"></p>
+                    </div>
+                    <div class="grid">
+                        <p>Direccion de Entrega:</p>
+                        <p id="pedido-direccion" </p>
+                    </div>
+                    <div class="grid">
+                        <p>Hora:</p>
+                        <p id="Hora" </p>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+                        aria-label="Close">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer> © Copyright</footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="js/controlador-categorias.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+.detalle {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.enunciado {
+    font-weight: bold;
+}
+
+.orden {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
+    margin-bottom: 0.5rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+        rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    border: 1px solid rgba(0, 0, 0, 0.119);
+}
+#facturaArriba {
+    background-color: black;
+    color: white;
+}
